@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>DM ARMY OFFICIAL - Official Community</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4685421681736241');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4685421681736241&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #080e14;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: linear-gradient(180deg, #0f1923 0%, #080d12 100%);
+            border: 1px solid rgba(0, 230, 153, 0.2);
+            border-radius: 28px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 230, 153, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Badge Status */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 153, 0.1);
+            border: 1px solid #00e699;
+            color: #00e699;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e699;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00e699;
+            animation: blink 1.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        /* DP Wrapper & Animation */
+        .dp-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px auto;
+        }
+
+        .dp-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00e699;
+            box-shadow: 0 0 20px rgba(0, 230, 153, 0.4);
+            animation: pulseGlow 2.5s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 15px rgba(0, 230, 153, 0.4);
+                transform: scale(1);
+            }
+            100% {
+                box-shadow: 0 0 30px rgba(0, 230, 153, 0.8);
+                transform: scale(1.03);
+            }
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            background: #00e699;
+            color: #000;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            border: 2px solid #0f1923;
+        }
+
+        /* Title & Description */
+        .title {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .description {
+            font-size: 14px;
+            color: #9aa8b6;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* CTA Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-blue {
+            background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+            animation: buttonPulse 2s infinite;
+        }
+
+        .btn-red {
+            background: linear-gradient(90deg, #ff0055 0%, #ff5252 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+            animation: buttonPulse 2s infinite 1s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        @keyframes buttonPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .telegram-icon {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* Footer & Compliance Disclaimer */
+        .footer-info {
+            font-size: 12px;
+            color: #5c6b73;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .disclaimer-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 10px;
+            color: #62727d;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .disclaimer-links {
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .disclaimer-links a {
+            color: #7b8d9b;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .disclaimer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Status -->
+        <div class="status-badge">
+            <span class="status-dot"></span> Official Community
+        </div>
+
+        <!-- Profile Image -->
+        <div class="dp-container">
+            <img src="https://www.image2url.com/r2/default/images/1791457478088-291cf0d6-ff0f-4e03-ad4d-7981cc086691.png" alt="DM ARMY OFFICIAL" class="dp-image">
+            <div class="verified-badge">✓</div>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h1 class="title">DM ARMY OFFICIAL</h1>
+        <p class="description">Explore market updates, analysis and educational insights.</p>
+
+        <!-- CTA Buttons -->
+        <a href="https://t.me/+iL3PGwWZXiY0ODc1" class="btn btn-blue protected-link" onclick="handleLinkClick(event, 'https://t.me/+iL3PGwWZXiY0ODc1')">
+            <svg class="telegram-icon" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.37-3.6 3.98-1.66 4.81-1.95 5.35-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.28z"/>
+            </svg>
+            JOIN TELEGRAM NOW
+        </a>
+
+        <a href="https://t.me/+iL3PGwWZXiY0ODc1" class="btn btn-red protected-link" onclick="handleLinkClick(event, 'https://t.me/+iL3PGwWZXiY0ODc1')">
+            <svg class="telegram-icon" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.37-3.6 3.98-1.66 4.81-1.95 5.35-1.96.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.28z"/>
+            </svg>
+            JOIN TELEGRAM NOW
+        </a>
+
+        <div class="footer-info">
+            Ads Managed by @VeroAdsX
+        </div>
+
+        <!-- Meta Compliant Disclaimer & Legal Footnote -->
+        <div class="disclaimer-section">
+            <p><strong>Disclaimer:</strong> This website is for educational and informational purposes only. We do not provide financial advice, guarantees, or investment tips. Trading and investing carry risk. Please consult a certified professional before making any financial decisions.</p>
+            <p style="margin-top: 6px;">This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, This site is NOT endorsed by Meta in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+            <div class="disclaimer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bot Filter & Click Protection Script -->
+    <script>
+        // Check for Automated / Bot Behavior
+        function isBotDetected() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const botKeywords = ['bot', 'crawler', 'spider', 'headless', 'phantomjs', 'selenium', 'puppeteer'];
+            
+            // User-agent detection
+            for (let keyword of botKeywords) {
+                if (userAgent.includes(keyword)) {
+                    return true;
+                }
+            }
+
+            // Headless browser checks
+            if (navigator.webdriver || window.callPhantom || window._phantom) {
+                return true;
+            }
+
+            return false;
+        }
+
+        let userInteractionDetected = false;
+
+        // Register legitimate human interaction (mouse move, scroll, touch)
+        ['mousemove', 'touchstart', 'scroll', 'keydown'].forEach(eventType => {
+            window.addEventListener(eventType, () => {
+                userInteractionDetected = true;
+            }, { once: true });
+        });
+
+        function handleLinkClick(event, targetUrl) {
+            // Anti-bot click check
+            if (isBotDetected() || !userInteractionDetected) {
+                event.preventDefault();
+                console.warn('Bot click prevented.');
+                return false;
+            }
+
+            // Track Lead / Click Event on Pixel
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
